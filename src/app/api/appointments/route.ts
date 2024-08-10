@@ -15,7 +15,6 @@ export async function POST(req: NextRequest) {
   try {
     const session = await getServerSession(authOptions);
 
-    // check if the user is authenticated
     if (!session) {
       return NextResponse.json(
         { success: false, error: 'Not authenticated' },
@@ -25,11 +24,10 @@ export async function POST(req: NextRequest) {
 
     await connectToDatabase();
 
-    // parsing the request data
     const data = await req.json();
 
-    // create and save the appointment
-    const appointment = new Appointment({ ...data });
+    // Include the user's email in the appointment data
+    const appointment = new Appointment({ ...data, user: session.user.email });
     await appointment.save();
 
     return NextResponse.json(
@@ -44,18 +42,21 @@ export async function POST(req: NextRequest) {
   }
 }
 
+
 export async function GET(req: NextRequest) {
   try {
-    const user = await auth(req);
+    const session = await getServerSession(authOptions);
 
-    if (!user) {
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    if (!session) {
+      return NextResponse.json(
+        { success: false, error: 'Not authenticated' },
+        { status: 401 }
+      );
     }
-
     await connectToDatabase();
 
-    // fetching appointments only for the logged-in user
-    const appointments = await Appointment.find({ user: user.email });
+    // Fetch appointments only for the logged-in user
+    const appointments = await Appointment.find({ user: session.user.email });
 
     return NextResponse.json(
       { success: true, data: appointments },
@@ -71,11 +72,15 @@ export async function GET(req: NextRequest) {
 
 export async function DELETE(req: NextRequest) {
   try {
-    const user = await auth(req);
+    const session = await getServerSession(authOptions);
 
-    if (!user) {
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    if (!session) {
+      return NextResponse.json(
+        { success: false, error: 'Not authenticated' },
+        { status: 401 }
+      );
     }
+
 
     await connectToDatabase();
 
@@ -88,7 +93,7 @@ export async function DELETE(req: NextRequest) {
 
     const appointment = await Appointment.findOneAndDelete({
       _id: id,
-      user: user.email, // only delete if the appointment belongs to the user
+      user: session.user.email
     });
 
     if (!appointment) {

@@ -78,7 +78,8 @@ export default function AppointmentForm() {
         <Input type="date" />
       </Form.Item>
 
-      <Form.Item label="Message" name="message">
+      <Form.Item 
+              rules={[{ required: true, message: "Message is required" }]} label="Message" name="message">
         <Input.TextArea placeholder="Message" />
       </Form.Item>
 
