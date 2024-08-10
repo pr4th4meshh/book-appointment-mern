@@ -4,12 +4,20 @@ import { Form, Input, Button, message } from "antd"
 import axios from "axios"
 import { useSession } from "next-auth/react"
 
+interface AppointmentFormValues {
+  name: string
+  email: string
+  phone: string
+  date: string
+  message: string
+}
+
 export default function AppointmentForm() {
   const [loading, setLoading] = useState(false)
   const [form] = Form.useForm()
   const { data: session } = useSession()
 
-  const onFinish = async (values) => {
+  const onFinish = async (values: AppointmentFormValues) => {
     setLoading(true)
     try {
       await axios.post("/api/appointments", values)

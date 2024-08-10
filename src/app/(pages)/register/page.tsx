@@ -40,7 +40,7 @@
 import { FormEvent, useRef, useState } from "react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
-import { register } from "@/actions/register"
+import { register } from "../../../actions/register"
 
 export default function Register() {
   const [error, setError] = useState<string>()

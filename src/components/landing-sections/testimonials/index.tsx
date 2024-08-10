@@ -5,16 +5,20 @@ const CARD_DATA = [
   {
     id: 1,
     title: "video",
+    image: "https://www.skinandyou.in/wp-content/themes/skinandyou%203.0/images/non-surgical-skin-tightening.jpg"
   },
   {
     id: 2,
     title: "blogs",
-    url: "/coming-soon"
+    url: "/coming-soon",
+    image: "https://www.skinandyou.in/wp-content/themes/skinandyou%203.0/images/upper-lips-b-a.jpg"
+
   },
   {
     id: 3,
     title: "awards",
-    url: "/coming-soon"
+    url: "/coming-soon",
+    image: "https://www.skinandyou.in/wp-content/themes/skinandyou%203.0/images/causes-of-facial-wrinkles.jpg"
   },
 ];
 

@@ -20,7 +20,7 @@ const CardComponent = ({ item }: any) => {
           )}
         </h1>
         <Image
-          src={"https://via.placeholder.com/600x600"}
+          src={item.image}
           height={200}
           width={280}
           className="h-[180px] w-full"

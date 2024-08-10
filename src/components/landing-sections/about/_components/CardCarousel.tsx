@@ -6,22 +6,27 @@ const CARD_DATA = [
   {
     id: 1,
     title: "body slimming treatment",
+    image: "https://www.skinandyou.in/wp-content/themes/skinandyou%203.0/images/pigmentary-changes.jpg"
   },
   {
     id: 2,
     title: "acne/acne reduction",
+    image: "https://www.skinandyou.in/wp-content/themes/skinandyou%203.0/images/eyebrows.jpg"
   },
   {
     id: 3,
     title: "body slimming treatment",
+    image: "https://www.skinandyou.in/wp-content/themes/skinandyou%203.0/images/bridal.jpg"
   },
   {
     id: 4,
     title: "acne/acne reduction",
+    image: "https://www.skinandyou.in/wp-content/themes/skinandyou%203.0/images/causes-of-facial-wrinkles.jpg"
   },
   {
     id: 5,
     title: "body slimming treatment",
+    image: "https://www.skinandyou.in/wp-content/themes/skinandyou%203.0/images/non-surgical-skin-tightening.jpg"
   },
 ];
 

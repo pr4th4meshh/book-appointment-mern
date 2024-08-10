@@ -10,21 +10,27 @@ interface Appointment {
   _id: string
   date: string
   message: string
+  phone: number
+  email: string
 }
 
 export default function ClientDashboard() {
   const { data: session, status } = useSession()
   const [appointments, setAppointments] = useState<Appointment[]>([])
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     const fetchAppointments = async () => {
       if (status === "authenticated") {
+        setLoading(true)
         try {
           const response = await axios.get("/api/appointments")
           const data: { data: Appointment[] } = response.data
           setAppointments(data.data)
         } catch (error) {
           console.error("Failed to fetch appointments", error)
+        } finally {
+          setLoading(false)
         }
       }
     }
@@ -73,6 +79,10 @@ export default function ClientDashboard() {
             Welcome, {session.user.name}
           </p>
         )}
+        {loading && <h1>Loading appointments..</h1>}
+        {appointments.length === 0 && (
+          <h1 className="text-xl">No appointments to show, start booking!</h1>
+        )}
         <ul className="space-y-4">
           {appointments.map((appointment) => (
             <li
@@ -80,12 +90,18 @@ export default function ClientDashboard() {
               className="flex flex-col sm:flex-row justify-between items-center p-4 border rounded-lg shadow-sm bg-gray-50"
             >
               <div className="flex-1">
-                <p className="text-lg sm:text-xl font-semibold">
+                <p className="text-lg sm:text-xl font-semibold pb-2">
                   {appointment.message}
                 </p>
                 <p className="text-gray-600">
                   Appointment on:{" "}
                   {moment(appointment.date).format("MMMM D, YYYY")}
+                </p>
+                <p className="text-gray-600">
+                  Your contact number: {appointment.phone}
+                </p>
+                <p className="text-gray-600">
+                  Your e-mail: {appointment.email}
                 </p>
               </div>
               <button
@@ -99,7 +115,7 @@ export default function ClientDashboard() {
         </ul>
         <button
           onClick={() => signOut()}
-          className="mt-6 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+          className="mt-6 bg-red-500 text-white py-2 px-4 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
         >
           Sign Out
         </button>

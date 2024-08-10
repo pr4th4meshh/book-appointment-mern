@@ -1,20 +1,28 @@
 import React from "react";
-import { FacebookOutlined, CopyrightCircleOutlined } from "@ant-design/icons";
+import {
+  FacebookOutlined,
+  PhoneOutlined,
+  InstagramOutlined,
+  TwitterOutlined,
+  LinkedinOutlined,
+  MailOutlined,
+  CopyrightCircleOutlined
+} from "@ant-design/icons"
 import Link from "next/link";
 
 const Footer = () => {
   return (
     <div className="w-full bg-[#b0985a] py-6">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-[130px]">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Social Media and Approval Section */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-6 mb-4">
           <div className="flex flex-row text-white text-xl sm:text-2xl gap-x-4">
             <FacebookOutlined />
-            <FacebookOutlined />
-            <FacebookOutlined />
-            <FacebookOutlined />
-            <FacebookOutlined />
-            <FacebookOutlined />
+            <PhoneOutlined />
+            <InstagramOutlined />
+            <TwitterOutlined />
+            <LinkedinOutlined />
+            <MailOutlined />
           </div>
 
           <h1 className="text-white text-xl sm:text-2xl text-center">

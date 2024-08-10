@@ -5,27 +5,17 @@ import Image from "next/image";
 const CAROUSEL_IMAGES = [
   {
     id: 1,
-    imageLink: "https://via.placeholder.com/1000x600",
+    imageLink: "https://www.skinandyou.in/wp-content/themes/skinandyou%203.0/images/botox.jpg",
     imageRoute: "/coming-soon",
   },
   {
     id: 2,
-    imageLink: "https://via.placeholder.com/1000x600",
+    imageLink: "https://www.skinandyou.in/wp-content/themes/skinandyou%203.0/images/lipocontrast.jpg",
     imageRoute: "/coming-soon",
   },
   {
     id: 3,
-    imageLink: "https://via.placeholder.com/1000x600",
-    imageRoute: "/coming-soon",
-  },
-  {
-    id: 4,
-    imageLink: "https://via.placeholder.com/1000x600",
-    imageRoute: "/coming-soon",
-  },
-  {
-    id: 5,
-    imageLink: "https://via.placeholder.com/1000x600",
+    imageLink: "https://www.skinandyou.in/wp-content/themes/skinandyou%203.0/images/laser-hair-reduction.jpg",
     imageRoute: "/coming-soon",
   },
 ];

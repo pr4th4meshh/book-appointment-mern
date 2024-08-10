@@ -1,18 +1,25 @@
 "use client"
 import React from "react"
 import { IoLocationSharp } from "react-icons/io5"
-import { FaPhoneAlt, FaFacebook } from "react-icons/fa"
+import {
+  FacebookOutlined,
+  PhoneOutlined,
+  InstagramOutlined,
+  TwitterOutlined,
+  LinkedinOutlined,
+  MailOutlined,
+} from "@ant-design/icons"
 import Link from "next/link"
 import { Button } from "antd"
 import { useSession } from "next-auth/react"
+import Image from "next/image"
+import SearchBar from "./ui/SearchBar"
 
 const NAV_LINKS = [
   { id: 1, title: "home", route: "/" },
   { id: 2, title: "treatments", route: "/" },
   { id: 3, title: "skin & faq", route: "/" },
-  { id: 6, title: "media", route: "/" },
-  { id: 7, title: "about", route: "/" },
-  { id: 8, title: "view-appointments", route: "/view-appointments" },
+  { id: 4, title: "view-appointments", route: "/view-appointments" },
 ]
 
 const Navbar = () => {
@@ -27,23 +34,36 @@ const Navbar = () => {
             Court, Nariman Point, Mumbai – 21
           </h1>
           <h1 className="flex items-center">
-            <FaPhoneAlt className="text-primary mr-1" /> +91 22
+            <PhoneOutlined className="text-primary mr-1" /> +91 22
             22843000/22825555
           </h1>
         </div>
 
         <div className="flex flex-wrap justify-center gap-2 text-primary">
-          {[...Array(5)].map((_, index) => (
-            <FaFacebook key={index} className="text-xl" />
-          ))}
+          <FacebookOutlined className="text-xl" />
+          <InstagramOutlined className="text-xl" />
+          <LinkedinOutlined className="text-xl" />
+          <TwitterOutlined className="text-xl" />
+          <MailOutlined className="text-xl" />
         </div>
       </div>
 
       {/* main nav */}
       <div className="container mx-auto flex flex-col sm:flex-row px-4 md:px-[130px] py-7 justify-between items-center">
-        <h1 className="text-3xl sm:text-4xl font-bold">Skin & You</h1>
+        <Link href="/">
+          {/* <h1 className="text-3xl sm:text-4xl font-bold">Skin & You</h1> */}
+          <Image
+            alt="logo"
+            src="https://www.skinandyou.in/wp-content/themes/skinandyou%203.0/images/logo.png"
+            height={200}
+            width={260}
+            priority
+            className="w-auto h-auto"
+          />
+        </Link>
         <h1 className="flex items-center text-sm sm:text-2xl">
-          <FaPhoneAlt className="text-primary mr-1" /> +91 22 22843000/22825555
+          <PhoneOutlined className="text-primary mr-1" /> +91 22 22843000 /{" "}
+          22825555
         </h1>
       </div>
 
@@ -62,6 +82,8 @@ const Navbar = () => {
             </Link>
           ))}
 
+          <SearchBar />
+
           <Link href={"#book-an-appointment"}>
             <Button type="text" className="bg-white px-6 py-2 text-primary">
               Book an appointment
@@ -69,9 +91,9 @@ const Navbar = () => {
           </Link>
 
           {!session ? (
-            <Link href="register">Sign up / sign in</Link>
+            <Link href="/register">Sign up / sign in</Link>
           ) : (
-            <h1 className="">hello, {session?.user.name}</h1>
+            <h1 className="">hello, {session.user && session?.user.name}</h1>
           )}
         </div>
       </div>

@@ -1,6 +1,6 @@
 "use server"
-import connectToDatabase from "@/utils/db"
-import User from "@/models/User"
+import connectToDatabase from "../utils/db"
+import User from "../models/User"
 import bcrypt from "bcryptjs"
 
 export const register = async (values: any) => {

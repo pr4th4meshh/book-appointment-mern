@@ -2,7 +2,14 @@ import { Card } from "antd"
 import Image from "next/image"
 import React from "react"
 
-const CardComponent = ({ item }: any) => {
+interface IItem {
+  item: {
+    image: string
+    title: string
+  }
+}
+
+const CardComponent = ({ item }: IItem) => {
   return (
     <div>
       <Card
@@ -10,7 +17,7 @@ const CardComponent = ({ item }: any) => {
         className="my-[20px] md:my-[40px] rounded-none w-[300px] md:w-[280px]"
       >
         <Image
-          src={"https://via.placeholder.com/600x600"}
+          src={item.image}
           height={200}
           width={280}
           className="h-[180px] w-full"

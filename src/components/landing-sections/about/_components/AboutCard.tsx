@@ -10,7 +10,8 @@ const AboutCard = () => {
           height={300}
           width={300}
           className="w-full h-[400px]"
-          src={"https://via.placeholder.com/600x600"}
+          src={"https://www.skinandyou.in/wp-content/themes/skinandyou%203.0/images/dr-geeta-mehra-fazalbhoy-home-img.jpg"}
+          quality={100}
           alt="about card"
         />
       </div>
