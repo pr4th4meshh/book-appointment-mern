@@ -69,7 +69,7 @@ const Navbar = () => {
 
       {/* bottom nav */}
       <div className="bg-primary py-2 text-white">
-        <div className="flex flex-col sm:flex-row text-sm font-semibold container px-4 sm:px-6 lg:px-[130px] mx-auto justify-between uppercase items-center">
+        <div className="flex flex-col sm:flex-row text-sm font-semibold container px-4 sm:px-6 lg:px-[130px] mx-auto justify-between uppercase items-center gap-y-2">
           {NAV_LINKS.map((item) => (
             <Link href={item.route} key={item.id}>
               <h1

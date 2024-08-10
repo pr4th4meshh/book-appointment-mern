@@ -33,14 +33,14 @@ const HeroSection: React.FC = () => {
         className="relative"
       >
         {CAROUSEL_IMAGES.map((item) => (
-          <div key={item.id} className="relative w-full h-80 md:h-[500px] lg:h-[600px]">
+          <div key={item.id} className="relative w-full h-[200px] md:h-[500px] lg:h-[600px]">
             {/* <Link href={item.imageRoute}> */}
               <Image
                 src={item.imageLink}
                 alt="carousel-image"
-                layout="fill"
-                objectFit="cover"
                 quality={100}
+                fill
+                className="w-full h-full"
               />
             {/* </Link> */}
           </div>

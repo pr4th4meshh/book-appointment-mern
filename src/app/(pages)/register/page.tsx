@@ -62,7 +62,7 @@ export default function Register() {
   }
 
   return (
-    <section className="w-full h-screen flex items-center justify-center">
+    <section className="w-full py-8 md:px-0 px-4 md:py-0 h-auto md:h-screen flex items-center justify-center">
       <form
         ref={ref}
         action={handleSubmit}

@@ -44,7 +44,7 @@ export default function AppointmentForm() {
       wrapperCol={{ span: 16 }}
       initialValues={{ remember: true }}
       onFinish={onFinish}
-      className="flex flex-col w-[270px] md:w-[600px]"
+      className="flex flex-col w-[250px] md:w-[600px]"
     >
       <Form.Item
         label="Your Name"
@@ -78,8 +78,11 @@ export default function AppointmentForm() {
         <Input type="date" />
       </Form.Item>
 
-      <Form.Item 
-              rules={[{ required: true, message: "Message is required" }]} label="Message" name="message">
+      <Form.Item
+        rules={[{ required: true, message: "Message is required" }]}
+        label="Message"
+        name="message"
+      >
         <Input.TextArea placeholder="Message" />
       </Form.Item>
 
