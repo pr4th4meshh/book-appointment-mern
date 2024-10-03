@@ -18,7 +18,7 @@ const SearchBar = () => {
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search treatments..."
+        placeholder="Search for acne..."
         className="border p-2 w-full text-black"
       />
       <button type="submit" className="bg-blue-500 text-white p-2 ml-2">

@@ -1,59 +1,100 @@
-# Skincare Appointment App
+# Book Appointment MERN [Skin & You]
 
-## Overview
+## Project Overview
 
-This project is a skincare appointment application built using Next.js, hosted on Vercel. It provides features for booking and managing skincare appointments, viewing treatment details, and searching for treatments.
+Book Appointment MERN is a full-stack web application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack. This project aims to provide a platform for users to book appointments with doctors. It features user authentication, appointment scheduling, and an admin panel for managing doctors and appointments.
 
-## Folder Structure
+## Key Features
 
-This project follows quality folder structure with best practices using the src/app directory by Next.js
-I have implemented easy to understand folder structure that makes this project easy to carry along.
+- User Registration and Authentication
+- Doctor Listing and Search
+- Appointment Booking System
+- Admin Panel for Managing Doctors and Appointments
+- Responsive Design for Mobile and Desktop
 
 ## Tech Stack
 
-- **Frontend**: 
-  - **Next.js**: React framework for server-side rendering and static site generation.
-  - **TypeScript**: For type safety and improved developer experience.
-  - **TailwindCSS**: Utility-first CSS framework for styling.
-  - **React Hook Form**: For handling form validations and submissions.
-  - **Ant Design**: Components and icons library for React allowing the use of TypeScript
-  
-- **Backend**:
-  - **MongoDB**: NoSQL database for storing appointment and treatment data.
-  - **Mongoose**: ODM for MongoDB in Node.js.
+- Frontend: React.js with Redux for state management
+- Backend: Node.js with Express.js
+- Database: MongoDB
+- Authentication: JSON Web Tokens (JWT)
+- Styling: CSS Modules
 
-- **Authentication**:
-  - **NextAuth.js**: Authentication library for Next.js, using JWT for session management.
+## Project Structure
 
-- **Deployment**:
-  - **Vercel**: Platform for deploying and hosting Next.js applications.
+The project is divided into two main directories:
 
-### Admin Panel will be launched soon!
+1. `client`: Contains the React frontend application
+2. `server`: Contains the Node.js/Express backend application
 
-### Installation
+### Client-side Structure
 
-1. **Clone the repository**:
+- `src/components`: Reusable React components
+- `src/pages`: Main page components
+- `src/redux`: Redux actions, reducers, and store configuration
+- `src/styles`: CSS modules for styling components
 
-   git clone https://github.com/pr4th4meshh/book-appointment-mern
-   cd book-appointment-mern
+### Server-side Structure
 
-2. **Install Dependencies**:
+- `config`: Database configuration
+- `controllers`: Request handlers for different routes
+- `middlewares`: Custom middleware functions
+- `models`: Mongoose schemas for database models
+- `routes`: API route definitions
 
+## Getting Started
+
+To run this project locally, follow these steps:
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/pr4th4meshh/book-appointment-mern.git
+   ```
+
+2. Install dependencies for both client and server:
+   ```
+   cd book-appointment-mern/client
    npm install
+   cd ../server
+   npm install
+   ```
 
-3. **Setup .env Variables**
+3. Set up environment variables:
+   - Create a `.env` file in the `server` directory
+   - Add necessary environment variables (e.g., MongoDB connection string, JWT secret)
 
-   NEXT_PUBLIC_MONGODB_URI="your-mongodb-uri"
-   NEXTAUTH_URL="http://localhost:3000"
-   NEXTAUTH_SECRET="your-nextauth-secret"
+4. Start the backend server:
+   ```
+   cd server
+   npm start
+   ```
 
-4. **Start Development Server**   
- 
-   npn run dev 
-   # or
-   yarn dev
+5. Start the frontend development server:
+   ```
+   cd client
+   npm start
+   ```
 
+6. Open your browser and navigate to `http://localhost:3000` to view the application.
 
-### Contribute  
+## Contributing
 
-   Feel free to contribute to this project / repository by performing a git pull and git push of your changes.
+Contributions to this project are welcome. Please follow these steps to contribute:
+
+1. Fork the repository
+2. Create a new branch for your feature
+3. Commit your changes
+4. Push to your fork
+5. Submit a pull request
+
+## License
+
+This project is open-source and available under the MIT License.
+
+## Contact
+
+For any questions or concerns, please open an issue on the GitHub repository.
+
+---
+
+Thank you for checking out the Book Appointment MERN project!

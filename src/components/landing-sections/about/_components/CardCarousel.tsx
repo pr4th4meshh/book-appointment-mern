@@ -6,27 +6,27 @@ const CARD_DATA = [
   {
     id: 1,
     title: "body slimming treatment",
-    image: "https://www.skinandyou.in/wp-content/themes/skinandyou%203.0/images/pigmentary-changes.jpg"
+    image: "https://www.skinandyou.in/static/media/open-pores.96fc540ebfefe8258e72.jpg"
   },
   {
     id: 2,
     title: "acne/acne reduction",
-    image: "https://www.skinandyou.in/wp-content/themes/skinandyou%203.0/images/eyebrows.jpg"
+    image: "https://www.skinandyou.in/static/media/milk-peel-vitamin-peel-blog.b23b6dc59ac24084ce0a.jpg"
   },
   {
     id: 3,
     title: "body slimming treatment",
-    image: "https://www.skinandyou.in/wp-content/themes/skinandyou%203.0/images/bridal.jpg"
+    image: "https://www.skinandyou.in/static/media/skin-care.b31511c0f30a52163f61.jpg"
   },
   {
     id: 4,
     title: "acne/acne reduction",
-    image: "https://www.skinandyou.in/wp-content/themes/skinandyou%203.0/images/causes-of-facial-wrinkles.jpg"
+    image: "https://www.skinandyou.in/static/media/milk-peel-vitamin-peel-blog.b23b6dc59ac24084ce0a.jpg"
   },
   {
     id: 5,
     title: "body slimming treatment",
-    image: "https://www.skinandyou.in/wp-content/themes/skinandyou%203.0/images/non-surgical-skin-tightening.jpg"
+    image: "https://www.skinandyou.in/static/media/de-tanning.5c26286e2413e0e860a6.jpg"
   },
 ];
 

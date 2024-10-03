@@ -6,25 +6,25 @@ const CARD_DATA = [
     id: 1,
     title: "Dr. Geeta’s article on “How to treat hyperpigmentation",
     image:
-      "https://www.skinandyou.in/wp-content/themes/skinandyou%203.0/images/non-surgical-skin-tightening.jpg",
+      "https://www.skinandyou.in/static/media/skin-care.b31511c0f30a52163f61.jpg",
   },
   {
     id: 2,
     title: "Dr. Geeta’s article on “How to treat hyperpigmentation",
     image:
-      "https://www.skinandyou.in/wp-content/themes/skinandyou%203.0/images/eyebrows.jpg",
+      "https://www.skinandyou.in/static/media/de-tanning.5c26286e2413e0e860a6.jpg",
   },
   {
     id: 3,
     title: "Dr. Geeta’s article on “How to treat hyperpigmentation",
     image:
-      "https://www.skinandyou.in/wp-content/themes/skinandyou%203.0/images/bridal.jpg",
+      "https://www.skinandyou.in/static/media/skin-care.b31511c0f30a52163f61.jpg",
   },
   {
     id: 4,
     title: "Dr. Geeta’s article on “How to treat hyperpigmentation",
     image:
-      "https://www.skinandyou.in/wp-content/themes/skinandyou%203.0/images/causes-of-facial-wrinkles.jpg",
+      "https://www.skinandyou.in/static/media/de-tanning.5c26286e2413e0e860a6.jpg",
   },
 ]
 

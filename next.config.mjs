@@ -11,9 +11,14 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "www.skinandyou.in"
+        hostname: "www.skinandyou.in",
+      },
+      {
+        protocol: "https",
+        hostname: "images.pexels.com",
       }
     ],
+    minimumCacheTTL: 60
   },
 }
 
